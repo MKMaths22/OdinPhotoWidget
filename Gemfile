@@ -2,6 +2,12 @@ source "https://rubygems.org"
 
 ruby "3.1.2"
 
+# Flickr API gem
+gem 'flickr', '~> 2.1'
+
+# Figaro for environment variables
+gem 'figaro'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
