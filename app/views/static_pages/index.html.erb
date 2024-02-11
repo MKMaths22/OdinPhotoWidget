@@ -1,1 +1,5 @@
-This is the index view for Static Pages.
+<%= form_with do |form| %>
+  <%= form.label :id, 'Enter your Flickr ID here:' %>
+  <%= form.text_field :id %>
+  <%= form.submit 'Get Photos' %>
+<% end %>
