@@ -1,4 +1,6 @@
-<%= form_with do |form| %>
+<%# I am having trouble trying to figure out what kind of form to use. Should the form submit to a flickr url? If so, I have not found this in the documentation for the flickr gem I have installed. Should the form submit to the same page? But there is no model, and even when I type 'rails routes' into the terminal I get an error. %>
+
+<%= form_with url: 'static_pages/index', method: :get do |form| %>
   <%= form.label :id, 'Enter your Flickr ID here:' %>
   <%= form.text_field :id %>
   <%= form.submit 'Get Photos' %>
