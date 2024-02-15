@@ -1,22 +1,16 @@
 class StaticPagesController < ApplicationController
   def index
     require 'flickr'
-    flickr = Flickr.new(api_key, shared_secret)
-    # This does not throw an error when I give it the values correctly,
-    # however I have not been able to get Figaro working correctly.
+    flickr = Flickr.new
+    @url_array = []
     if params[:id]
-      flickr.people.getPublicPhotos(user_id: :id)
+      output = flickr.people.getPublicPhotos(user_id: params[:id])
+      @url_array = output.map do |photo|
+        info = flickr.photos.getInfo(:photo_id => photo["id"])
+        url = Flickr.url_b(info)
+      end
     end
-  end
-
-  private
-
-  # Just coding it like this until I can get environment variables working in Figaro
-  def api_key
-    'censored_for_this_commit'
-  end
-
-  def shared_secret
-    'censored_for_this_commit'
+    rescue Flickr::FailedResponse => e
+      flash.now[:alert] = "Not found, please enter a valid Flickr user ID."
   end
 end
