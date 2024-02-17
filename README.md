@@ -30,4 +30,7 @@ I've not been entirely sure what 'react appropriately' means in step 8 of the in
 
 Getting Figaro working seemed very difficult, but what made this worse was that the environment variables cannot be found from the console, even when the app is finding them successfully. 
 
-Another surprising problem was that when the application.yml was not properly indented, this caused 'rails routes' to give me a Psych error --- fortunately Stack Exchange came to the rescue with this link, which I never would have guessed!
+Another surprising problem was that when the application.yml was not properly indented, this caused 'rails routes' to give me a Psych error --- fortunately Stack Overflow came to the rescue with this link, which I never would have guessed!
+
+https://stackoverflow.com/questions/18685702/rails-4-mapping-values-are-not-allowed-in-this-context-at-line-2-column-11-psy
+
