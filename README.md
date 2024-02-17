@@ -26,3 +26,8 @@ Flickr gem version 2.1.0 is used to access the Flickr API through the static_pag
 
 **Author notes by Peter Hawes**
 
+I've not been entirely sure what 'react appropriately' means in step 8 of the instructions, so I have added logic to the view to limit the number of photos displayed to 100 using a variable called 'limit' so that this value can be easily changed. For each url found, an img HTML element is created with the url as its src attribute.
+
+Getting Figaro working seemed very difficult, but what made this worse was that the environment variables cannot be found from the console, even when the app is finding them successfully. 
+
+Another surprising problem was that when the application.yml was not properly indented, this caused 'rails routes' to give me a Psych error --- fortunately Stack Exchange came to the rescue with this link, which I never would have guessed!
