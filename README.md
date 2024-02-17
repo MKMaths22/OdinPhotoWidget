@@ -17,10 +17,10 @@ This app is a solution for The Odin Project's Flickr API assignment, available a
 
 **Version Info**
 
-This app uses Ruby version 3.1.2p20 and Rails version 7.1.3
+This app uses Ruby version 3.1.2p20 and Rails version 7.1.3  
 The Figaro gem version 1.2.0 has been used for environment variables for the API key and shared secret of the App, which are kept in my application.yml file, which has
-not been committed with Git for security reasons.
-Flickr gem version 2.1.0 is used to access the Flickr API through the static_pages controller #index method.
+not been committed with Git for security reasons.  
+Flickr gem version 2.1.0 is used to access the Flickr API through the static_pages controller #index method.  
 
 ---------------------------------
 
