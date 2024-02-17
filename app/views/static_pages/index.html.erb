@@ -8,6 +8,14 @@
 <% if @url_array.size.zero? %>
   There are no photos to display.
 <% end %>
+<% limit = 100 %>
+<% if @url_array.size > limit %>
+  <% @url_array = @url_array.slice(0, limit) %>
+  <br>
+  Displaying the first <%= limit %> photos only.
+<% end %>
+<br>
+<br>
 <% @url_array.each do |url| %>
   <img src=<%= url %>>
 <% end %>
